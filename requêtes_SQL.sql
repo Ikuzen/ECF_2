@@ -1,12 +1,21 @@
 - 1
-SELECT d.ipn,d.firstname, d.lastname, (SELECT fr from technology WHERE technology.code = d.main_tech_code ) as predilection_tech
+SELECT 
+d.ipn,
+d.firstname, 
+d.lastname, 
+(SELECT fr 
+from technology 
+WHERE technology.code = d.main_tech_code ) as predilection_tech
 from developper d
-left JOIN learning_tech o  on d.ipn = o.ipn 
+left JOIN learning_tech o on d.ipn = o.ipn 
 WHERE o.ipn IS NULL
 
 
 - 2 
-SELECT d.ipn,d.firstname, d.lastname, 
+SELECT 
+d.ipn,
+d.firstname, 
+d.lastname, 
 (SELECT
  COUNT(a.ipn) tech_count 
  from learning_tech a
@@ -23,7 +32,13 @@ inner Join developper on a.ipn = developper.ipn
 
 - 3 
 
-SELECT d.ipn,d.firstname, d.lastname, (SELECT en from technology WHERE technology.code = d.main_tech_code ) as predilection_tech
+SELECT 
+d.ipn,
+d.firstname, 
+d.lastname, 
+(SELECT en 
+from technology
+WHERE technology.code = d.main_tech_code ) as predilection_tech
 from developper d
 WHERE
 d.ipn in 

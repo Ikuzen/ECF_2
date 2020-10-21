@@ -17,11 +17,7 @@ CREATE TABLE technology (
 ); 
 
 CREATE TABLE learning_tech (
+	id_learning SERIAL PRIMARY KEY, 
 	ipn varchar(8) NOT NULL,
 	tech_code varchar(7) NOT NULL
-);
-
-CREATE TABLE ipn_relation (
-    id_dev BIGINT references developper(id_dev),
-	ipn varchar(8) NOT NULL
 );
