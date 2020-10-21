@@ -1,6 +1,6 @@
 Cardinalités : 
 - 1 Developper maitrise exactement 1 technology
 - 1 technology est maitrsée par 0 ou plusieurs Developper
-- 1 main_technology est maitrisée par 1 ou plusieurs Developper
+- 1 technology est maitrisée par 1 ou plusieurs Developper
 - 1 Developper apprend 0 ou n technology
 - 1 technology est apprise par 0 ou n Developper
